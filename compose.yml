@@ -1,0 +1,20 @@
+services:
+  common_A:
+    image: debian:12
+    command: sleep infinity
+    develop:
+      watch:
+        - action: sync
+          path: ./com1
+          target: /app
+
+
+  common_B:
+    image: debian:12
+    command: sleep infinity
+    develop:
+      watch:
+        - action: sync
+          path: ./com2
+          target: /app
+

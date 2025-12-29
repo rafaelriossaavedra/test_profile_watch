@@ -1,0 +1,25 @@
+services:
+  svr_F:
+    image: debian:12
+    command: sleep infinity
+    profiles:
+      - p1
+      - p1_3
+    develop:
+      watch:
+        - action: sync
+          path: ./src5
+          target: /app
+
+
+  svr_G:
+    image: debian:12
+    command: sleep infinity
+    profiles:
+      - p2
+    develop:
+      watch:
+        - action: sync
+          path: ./src6
+          target: /app
+
