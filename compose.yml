@@ -1,5 +1,5 @@
 services:
-  common_A:
+  common_a:
     image: debian:12
     command: sleep infinity
     develop:
@@ -9,7 +9,7 @@ services:
           target: /app
 
 
-  common_B:
+  common_b:
     image: debian:12
     command: sleep infinity
     develop:

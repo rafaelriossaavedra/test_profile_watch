@@ -1,17 +1,17 @@
 services:
-  svr_F:
+  svr_f:
     image: debian:12
-    command: sleep infinity
+    command: sh -c "env | sort && sleep infinity"
     profiles:
       - p1
       - p1_3
     develop:
       watch:
         - action: sync
-          path: ./src5
+          path: $APP2_DIR/src5
           target: /app
 
-  svr_G:
+  svr_g:
     image: debian:12
     command: sleep infinity
     profiles:
@@ -19,6 +19,6 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./src6
+          path: $APP2_DIR/src6
           target: /app
 

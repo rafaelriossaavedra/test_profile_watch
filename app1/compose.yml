@@ -1,6 +1,7 @@
 services:
-  svr_A:
-    image: debian:12
+  svr_a:
+    build: $APP1_DIR/.
+    #image: debian:12
     command: sleep infinity
     profiles:
       - p1
@@ -8,22 +9,24 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./src1
+          path: $APP1_DIR/src1
           target: /app
 
-  svr_B:
-    image: debian:12
+  svr_b:
+    build: $APP1_DIR/.
+    #image: debian:12
     command: sleep infinity
     profiles:
       - p2
     develop:
       watch:
         - action: sync
-          path: ./src2
+          path: $APP1_DIR/src2
           target: /app
 
-  svr_C:
-    image: debian:12
+  svr_c:
+    build: $APP1_DIR/.
+    #image: debian:12
     command: sleep infinity
     profiles:
       - p3
@@ -31,10 +34,10 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./src3
+          path: $APP1_DIR/src3
           target: /app
 
-  svr_D:
+  svr_d:
     image: debian:12
     command: sleep infinity
     profiles:
@@ -42,6 +45,6 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./src4
+          path: $APP1_DIR/src4
           target: /app
 
