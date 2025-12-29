@@ -5,7 +5,7 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./com1
+          path: ./src_com1
           target: /app
 
 
@@ -15,6 +15,6 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./com2
+          path: ./src_com2
           target: /app
 
