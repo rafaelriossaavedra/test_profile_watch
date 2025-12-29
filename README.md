@@ -5,11 +5,11 @@ This is a small test repo for testing compose profiles and watch mode.
 ## Setup
 
 There is a compose in the main directory, that start common services.
-Then there is a subdirectory (`app1', 'app2') for each of the "applications". Each of this applications have its own compose file that start its own services.
+Then there is a subdirectory (`app1`, `app2`) for each of the "applications". Each of this applications have its own compose file that start its own services.
 
 In each of the compose files, the services have:
 
-- A directory to monitor file changes ('src_XXX'). This is montinored by the `watch` directive and only takes effect if `watch` parameter is added to `docker compose` command.
+- A directory to monitor file changes (`src_XXX`). This is montinore`watch` directive and only takes effect if `watch` parameter is added to `docker compose` command.
 - A profile asigned. So, you can indicate which profile(s) one you want to start.
 
 The way to indicate that a service is always started is by **not** assigning a profile.
